@@ -6,10 +6,20 @@ A fraud detection system using quantum computing via QCentroid and machine learn
 
 ```
 quantum_hackathon/
-├── data/           # Dataset storage
-├── model/          # Python ML code and notebooks
-├── app/            # Java application
-└── requirements.txt # Python dependencies
+├── app/                  # Java Spring Boot service
+│   ├── src/             # Java source code
+│   └── pom.xml          # Maven dependencies
+├── data/                # Dataset storage
+│   └── processed/       # Preprocessed datasets
+├── model/               # Python production code
+│   ├── fraud_data_analysis.py    # Data preprocessing
+│   ├── fraud_model_development.py # Model training
+│   └── predict.py               # Prediction service
+├── notebooks/           # Jupyter notebooks for development
+│   ├── fraud_data_analysis.ipynb
+│   ├── fraud_detection.ipynb
+│   └── fraud_model_development.ipynb
+└── requirements.txt     # Python dependencies
 ```
 
 ## Setup Instructions
