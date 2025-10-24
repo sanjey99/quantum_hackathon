@@ -4,7 +4,11 @@ pandas>=1.3.0
 scikit-learn>=0.24.2
 
 # Quantum Computing
-qcentroid>=1.0.0
+# qcentroid>=1.0.0  # TODO: Add when package becomes available or use alternative
+qiskit>=0.43.0      # IBM Quantum framework (alternative/compatible)
+qiskit-aer>=0.12.0  # Quantum simulator backend
+pennylane>=0.30.0   # Quantum ML framework (alternative)
+python-dotenv>=1.0.0  # For environment variable management
 
 # Machine Learning
 xgboost>=1.5.0

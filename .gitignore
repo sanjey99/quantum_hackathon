@@ -3,6 +3,94 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 
+# ====================
+# Python
+# ====================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+venv-*/
+env/
+ENV/
+.venv/
+
+# Python distribution / packaging
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints
+
+# Python testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# ML models and data (too large for git)
+model/saved_models/
+data/raw/
+data/processed/*.joblib
+*.pkl
+*.h5
+*.model
+*.joblib
+
+# ====================
+# Java / Maven
+# ====================
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# Maven local installation
+tools/apache-maven*/
+
+# Java class files
+*.class
+
+# Package Files
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# IDE specific files
+.idea/
+*.iml
+*.iws
+.vscode/
+.settings/
+.classpath
+.project
+.factorypath
+
+# ====================
+# Build Scripts
+# ====================
+# Keep build scripts but ignore logs
+build.log
+*.log
+
 # User-specific files
 *.rsuser
 *.suo

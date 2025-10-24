@@ -19,7 +19,7 @@ import com.qcentroid.frauddetection.model.Transaction;
 public class FraudDetectionService {
     private static final Logger logger = LoggerFactory.getLogger(FraudDetectionService.class);
     private final ObjectMapper objectMapper;
-    private static final String PYTHON_SCRIPT = "model/predict.py";
+    private static final String PYTHON_SCRIPT = "../model/predict.py";
 
     public FraudDetectionService(ObjectMapper objectMapper) {
         this.objectMapper = objectMapper;
