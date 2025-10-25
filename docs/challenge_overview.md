@@ -18,3 +18,12 @@ Choice and computation of quantum kernel for support vector machine
 Minimization of the objective function with a classical optimizer
 Determine model accuracy with performance metrics and adjust chosen feature subset if needed
 Comparison with classical feature selection baselines
+
+
+### SDG 8
+## Promote sustained, inclusive and sustainable economic growth, full and productive employment and decent work for all
+
+# How does the quantum enhanced fraud detection tackle SDG8?
+1. Minimises financial crime 
+2. Safer digital economy which is crucial for modern sustainable growth 
+3. Protect small businesses and jobs 
