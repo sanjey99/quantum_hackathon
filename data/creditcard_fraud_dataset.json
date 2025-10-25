@@ -1,0 +1,310 @@
+{
+  "dataset_info": {
+    "name": "Credit Card Fraud Detection",
+    "source": "Kaggle",
+    "url": "https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud",
+    "kaggle_command": "kaggle datasets download -d mlg-ulb/creditcardfraud",
+    "description": "Credit card transactions dataset containing fraudulent and legitimate transactions",
+    "version": "1.0",
+    "license": "Database: Open Database, Contents: Database Contents",
+    "citation": "Machine Learning Group - ULB"
+  },
+  "file_details": {
+    "filename": "creditcard.csv",
+    "format": "CSV",
+    "size_mb": 143.84,
+    "encoding": "UTF-8",
+    "delimiter": ",",
+    "compression": "zip"
+  },
+  "data_schema": {
+    "total_rows": 284807,
+    "total_columns": 31,
+    "columns": [
+      {
+        "name": "Time",
+        "type": "numeric",
+        "description": "Number of seconds elapsed between this transaction and the first transaction in the dataset",
+        "range": [0, 172792]
+      },
+      {
+        "name": "V1",
+        "type": "numeric",
+        "description": "PCA transformed feature 1 (anonymized)",
+        "is_pca": true
+      },
+      {
+        "name": "V2",
+        "type": "numeric",
+        "description": "PCA transformed feature 2 (anonymized)",
+        "is_pca": true
+      },
+      {
+        "name": "V3",
+        "type": "numeric",
+        "description": "PCA transformed feature 3 (anonymized)",
+        "is_pca": true
+      },
+      {
+        "name": "V4",
+        "type": "numeric",
+        "description": "PCA transformed feature 4 (anonymized)",
+        "is_pca": true
+      },
+      {
+        "name": "V5",
+        "type": "numeric",
+        "description": "PCA transformed feature 5 (anonymized)",
+        "is_pca": true
+      },
+      {
+        "name": "V6",
+        "type": "numeric",
+        "description": "PCA transformed feature 6 (anonymized)",
+        "is_pca": true
+      },
+      {
+        "name": "V7",
+        "type": "numeric",
+        "description": "PCA transformed feature 7 (anonymized)",
+        "is_pca": true
+      },
+      {
+        "name": "V8",
+        "type": "numeric",
+        "description": "PCA transformed feature 8 (anonymized)",
+        "is_pca": true
+      },
+      {
+        "name": "V9",
+        "type": "numeric",
+        "description": "PCA transformed feature 9 (anonymized)",
+        "is_pca": true
+      },
+      {
+        "name": "V10",
+        "type": "numeric",
+        "description": "PCA transformed feature 10 (anonymized)",
+        "is_pca": true
+      },
+      {
+        "name": "V11",
+        "type": "numeric",
+        "description": "PCA transformed feature 11 (anonymized)",
+        "is_pca": true
+      },
+      {
+        "name": "V12",
+        "type": "numeric",
+        "description": "PCA transformed feature 12 (anonymized)",
+        "is_pca": true
+      },
+      {
+        "name": "V13",
+        "type": "numeric",
+        "description": "PCA transformed feature 13 (anonymized)",
+        "is_pca": true
+      },
+      {
+        "name": "V14",
+        "type": "numeric",
+        "description": "PCA transformed feature 14 (anonymized)",
+        "is_pca": true
+      },
+      {
+        "name": "V15",
+        "type": "numeric",
+        "description": "PCA transformed feature 15 (anonymized)",
+        "is_pca": true
+      },
+      {
+        "name": "V16",
+        "type": "numeric",
+        "description": "PCA transformed feature 16 (anonymized)",
+        "is_pca": true
+      },
+      {
+        "name": "V17",
+        "type": "numeric",
+        "description": "PCA transformed feature 17 (anonymized)",
+        "is_pca": true
+      },
+      {
+        "name": "V18",
+        "type": "numeric",
+        "description": "PCA transformed feature 18 (anonymized)",
+        "is_pca": true
+      },
+      {
+        "name": "V19",
+        "type": "numeric",
+        "description": "PCA transformed feature 19 (anonymized)",
+        "is_pca": true
+      },
+      {
+        "name": "V20",
+        "type": "numeric",
+        "description": "PCA transformed feature 20 (anonymized)",
+        "is_pca": true
+      },
+      {
+        "name": "V21",
+        "type": "numeric",
+        "description": "PCA transformed feature 21 (anonymized)",
+        "is_pca": true
+      },
+      {
+        "name": "V22",
+        "type": "numeric",
+        "description": "PCA transformed feature 22 (anonymized)",
+        "is_pca": true
+      },
+      {
+        "name": "V23",
+        "type": "numeric",
+        "description": "PCA transformed feature 23 (anonymized)",
+        "is_pca": true
+      },
+      {
+        "name": "V24",
+        "type": "numeric",
+        "description": "PCA transformed feature 24 (anonymized)",
+        "is_pca": true
+      },
+      {
+        "name": "V25",
+        "type": "numeric",
+        "description": "PCA transformed feature 25 (anonymized)",
+        "is_pca": true
+      },
+      {
+        "name": "V26",
+        "type": "numeric",
+        "description": "PCA transformed feature 26 (anonymized)",
+        "is_pca": true
+      },
+      {
+        "name": "V27",
+        "type": "numeric",
+        "description": "PCA transformed feature 27 (anonymized)",
+        "is_pca": true
+      },
+      {
+        "name": "V28",
+        "type": "numeric",
+        "description": "PCA transformed feature 28 (anonymized)",
+        "is_pca": true
+      },
+      {
+        "name": "Amount",
+        "type": "numeric",
+        "description": "Transaction amount in currency",
+        "range": [0, 25691.16],
+        "statistics": {
+          "mean": 88.35,
+          "median": 22.0,
+          "std": 250.12
+        }
+      },
+      {
+        "name": "Class",
+        "type": "binary",
+        "description": "Target variable (1 for fraudulent transaction, 0 for legitimate)",
+        "values": {
+          "0": "Legitimate transaction",
+          "1": "Fraudulent transaction"
+        }
+      }
+    ]
+  },
+  "class_distribution": {
+    "legitimate_transactions": {
+      "count": 284315,
+      "percentage": 99.827
+    },
+    "fraudulent_transactions": {
+      "count": 492,
+      "percentage": 0.173
+    },
+    "imbalance_ratio": "577.87:1",
+    "note": "Highly imbalanced dataset - requires resampling or special handling"
+  },
+  "preprocessing_requirements": {
+    "scaling": {
+      "required": true,
+      "method": "StandardScaler",
+      "columns": ["Time", "Amount"],
+      "note": "V1-V28 are already PCA transformed and scaled"
+    },
+    "resampling": {
+      "required": true,
+      "reason": "Handle class imbalance",
+      "methods": ["SMOTE", "RandomUnderSampler", "ADASYN"],
+      "recommended": "SMOTE (Synthetic Minority Over-sampling Technique)"
+    },
+    "train_test_split": {
+      "test_size": 0.2,
+      "stratify": true,
+      "random_state": 42
+    }
+  },
+  "usage_for_quantum_ml": {
+    "feature_selection": {
+      "quantum_method": "Quantum Feature Selection",
+      "target_features": 10,
+      "note": "Reduce 30 features to manageable quantum dimension"
+    },
+    "quantum_kernel": {
+      "method": "QSVM (Quantum Support Vector Machine)",
+      "feature_map": "ZZFeatureMap",
+      "entanglement": "linear",
+      "reps": 2
+    },
+    "sample_size": {
+      "training": 500,
+      "testing": 200,
+      "reason": "Quantum circuit limitations and runtime constraints"
+    }
+  },
+  "local_paths": {
+    "raw_data": "data/raw/creditcard.csv",
+    "processed_data": {
+      "X_train_scaled": "data/processed/X_train_scaled.npy",
+      "y_train_resampled": "data/processed/y_train_resampled.npy",
+      "X_test_scaled": "data/processed/X_test_scaled.npy",
+      "y_test": "data/processed/y_test.npy",
+      "feature_names": "data/processed/feature_names.csv"
+    }
+  },
+  "download_instructions": {
+    "method_1_kaggle_api": {
+      "step_1": "Install Kaggle API: pip install kaggle",
+      "step_2": "Setup API credentials: Place kaggle.json in ~/.kaggle/",
+      "step_3": "Download: kaggle datasets download -d mlg-ulb/creditcardfraud",
+      "step_4": "Extract: unzip creditcardfraud.zip -d data/raw/"
+    },
+    "method_2_manual": {
+      "step_1": "Visit: https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud",
+      "step_2": "Click 'Download' button",
+      "step_3": "Extract creditcard.csv to data/raw/ folder"
+    }
+  },
+  "data_loader_script": {
+    "file": "model/load_kaggle_data.py",
+    "command": "python model/load_kaggle_data.py",
+    "output": "Processed .npy files in data/processed/"
+  },
+  "references": {
+    "paper": "Dal Pozzolo, Andrea, et al. 'Calibrating probability with undersampling for unbalanced classification.' 2015 IEEE Symposium Series on Computational Intelligence. IEEE, 2015.",
+    "kaggle_dataset": "https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud",
+    "ulb_ml_group": "https://mlg.ulb.ac.be/"
+  },
+  "notes": [
+    "Features V1-V28 are results of PCA transformation for confidentiality",
+    "Only 'Time' and 'Amount' have not been transformed with PCA",
+    "Dataset contains transactions over 2 days in September 2013",
+    "Highly imbalanced: only 0.172% of transactions are fraudulent",
+    "Recommended for binary classification and anomaly detection tasks",
+    "Suitable for quantum machine learning with proper preprocessing"
+  ]
+}
