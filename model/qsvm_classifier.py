@@ -11,24 +11,56 @@ This module implements QSVM using:
 """
 
 import numpy as np
-from typing import List, Tuple, Optional
+from typing import List, Tuple, Optional, TYPE_CHECKING
 from sklearn.svm import SVC
 from sklearn.metrics import accuracy_score
 import warnings
 warnings.filterwarnings('ignore')
 
-# Try to import Qiskit
+# Try to import Qiskit - handle both Qiskit 0.x and 1.x
 try:
-    from qiskit import QuantumCircuit
-    from qiskit.circuit import ParameterVector
+    # Try Qiskit 1.x imports first
+    try:
+        from qiskit import QuantumCircuit
+    except ImportError:
+        # Fallback to Qiskit 0.x location
+        from qiskit.circuit import QuantumCircuit
+    
     from qiskit.circuit.library import ZZFeatureMap, PauliFeatureMap
-    from qiskit_aer import AerSimulator
-    from qiskit.primitives import Sampler
+    
+    # Handle AerSimulator location differences
+    try:
+        from qiskit_aer import AerSimulator
+    except ImportError:
+        from qiskit.providers.aer import AerSimulator
+    
+    # Handle primitives
+    try:
+        from qiskit.primitives import Sampler
+    except ImportError:
+        Sampler = None  # Not critical
+    
     from qiskit_machine_learning.kernels import FidelityQuantumKernel
+    
     QISKIT_AVAILABLE = True
-except ImportError:
-    print("Warning: Qiskit not available. Install with: pip install qiskit qiskit-aer qiskit-machine-learning")
+    print("✓ Qiskit imported successfully")
+    
+except ImportError as e:
+    print(f"Warning: Qiskit not available. Error: {e}")
+    print("Install with: pip install qiskit qiskit-aer qiskit-machine-learning")
     QISKIT_AVAILABLE = False
+    # Create dummy types for runtime
+    if not TYPE_CHECKING:
+        QuantumCircuit = object
+        ZZFeatureMap = object
+        PauliFeatureMap = object
+        AerSimulator = object
+        FidelityQuantumKernel = object
+
+# For type checking
+if TYPE_CHECKING:
+    from qiskit import QuantumCircuit
+    from qiskit.circuit.library import ZZFeatureMap
 
 
 class ZZFeatureMapEncoder:

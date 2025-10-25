@@ -39,6 +39,7 @@ htmlcov/
 model/saved_models/
 data/raw/
 data/processed/*.joblib
+data/processed/*.npy
 *.pkl
 *.h5
 *.model
